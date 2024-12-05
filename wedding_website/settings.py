@@ -28,10 +28,17 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['filipandhailee.com']
+ALLOWED_HOSTS = [
+    'filipandhailee.com',
+    'www.filipandhailee.com',  # if you have a www CNAME
+    'https://wedding-7ib1.onrender.com',
+]
 CSRF_TRUSTED_ORIGINS = [
     'https://filipandhailee.com',
+    'https://www.filipandhailee.com',  # if applicable
+    'https://wedding-7ib1.onrender.com',
 ]
+
 
 # Application definition
 
