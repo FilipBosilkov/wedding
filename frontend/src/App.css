@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Motterdam';
+  src: url('./assets/fonts/Motterdam.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WastedVidney';
+  src: url('./assets/fonts/WastedVindey.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+/*//#D8BFD8 0%, #96B8E4 100%*/
+body {
+  background-image: url("../public/backgroundflowers.jpg");
+  background-size: cover; /* Ensures the image covers the full viewport */
+  background-position: center; /* Centers the background */
+    background-attachment: scroll; /* Allows the image to scroll with content */
+
+}
+
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.card-slider {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-button {
+  left: -50px;
+}
+
+.right-button {
+  right: -50px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
