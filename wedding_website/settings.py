@@ -28,10 +28,16 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['*'
+ALLOWED_HOSTS = [
+'https://wedding-7ib1.onrender.com',
+'https://filipandhailee.com',
+    'https://www.filipandhailee.com',  # if applicable
+
 ]
 CSRF_TRUSTED_ORIGINS = [
-    '*'
+'https://wedding-7ib1.onrender.com',
+'https://filipandhailee.com',
+    'https://www.filipandhailee.com',  # if applicable
 ]
 
 
@@ -50,10 +56,13 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    '*'
+    'https://wedding-7ib1.onrender.com',
+    'https://filipandhailee.com',
+        'https://www.filipandhailee.com',  # if applicable
 ]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',  # Enable Whitenoise
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
