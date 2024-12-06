@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.e57bb564.js",
+    "main.css": "/static/css/main.1cfccc29.css",
+    "main.js": "/static/js/main.9a98e5f8.js",
     "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/backgroundflowers.jpg": "/static/media/backgroundflowers.9cbe91922489c3a570fb.jpg",
+    "static/media/Motterdam.ttf": "/static/media/Motterdam.367b03312cabaf8c48b2.ttf",
+    "static/media/WastedVindey.ttf": "/static/media/WastedVindey.c33a00075b6ee3388fdf.ttf",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.e57bb564.js.map": "/static/js/main.e57bb564.js.map",
+    "main.1cfccc29.css.map": "/static/css/main.1cfccc29.css.map",
+    "main.9a98e5f8.js.map": "/static/js/main.9a98e5f8.js.map",
     "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.e57bb564.js"
+    "static/css/main.1cfccc29.css",
+    "static/js/main.9a98e5f8.js"
   ]
 }
