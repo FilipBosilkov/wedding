@@ -3,13 +3,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('homepage.urls')),  # Including your homepage app's urls
-    path('registry/', include('homepage.urls')),
-    path('gallery/', include('homepage.urls'))
-    # index add
+    path('', include('homepage.urls')),  # Route all requests to the homepage app
 ]
 
 # Add static and media URL serving only in development mode (DEBUG=True)
