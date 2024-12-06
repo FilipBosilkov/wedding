@@ -1,5 +1,5 @@
 import {Box, Typography} from "@mui/material";
-import React, from "react";
+import React from "react";
 
 const Hero = ({scrollToDetails}) => {
 
@@ -62,5 +62,6 @@ const Hero = ({scrollToDetails}) => {
         </Box>
     );
 }
+
 
 export default Hero;
