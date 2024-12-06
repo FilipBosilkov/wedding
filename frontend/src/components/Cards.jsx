@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import {Card, CardMedia, CardContent, Typography, Box, Button, TextareaAutosize, Link} from '@mui/material';
+import {Card, CardMedia, CardContent, Typography, Box, Button, TextareaAutosize} from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 

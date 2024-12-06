@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React,  from 'react';
 import GalleryCard from "../components/GalleryCard";
 
 const Gallery = () => {
