@@ -1,67 +1,69 @@
-import {Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const Hero = ({scrollToDetails}) => {
-
-
+const Hero = ({ scrollToDetails }) => {
     return (
-        <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' margin='50px'
-             marginTop='30px' marginBottom='10px'
-             color='white'>
-
-
+        <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            margin="50px"
+            marginTop="30px"
+            marginBottom="10px"
+            color="white"
+        >
             <Typography
                 sx={{
-                    fontFamily: 'Motterdam',
+                    fontFamily: "Motterdam",
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: '50px',
+                    fontSize: "50px",
                 }}
                 variant="h4"
                 align="center"
-
-
-            >Welcome To
+            >
+                Welcome To
             </Typography>
 
-            <img style={{
-                position: "relative",
-                maxWidth: '600px',
-                maxHeight: '500px',
-                paddingBottom: '0px',
-                marginBottom: '50px',
-            }} src='/website_title2.png' alt="Click here for wedding details!"/>
+            <img
+                style={{
+                    position: "relative",
+                    maxWidth: "600px",
+                    maxHeight: "500px",
+                    paddingBottom: "0px",
+                    marginBottom: "50px",
+                }}
+                src="/website_title2.png"
+                alt="Website Title"
+            />
 
-
-            <a
+            <button
                 onClick={scrollToDetails}
                 style={{
-                    cursor: 'pointer',
-                    paddingBottom: '0px',
-                    marginBottom: '50px',
-                    height: '50px',
-                    border: 'none',
-                    background: 'none' // Removes default button styling
+                    cursor: "pointer",
+                    background: "none",
+                    border: "none",
+                    padding: "0",
+                    marginBottom: "50px",
+                    height: "50px",
                 }}
-                role="button" // Ensures accessibility
             >
-                <img style={{
-                    position: "relative",
-                    maxWidth: '500px',
-                    maxHeight: '400px',
-                    marginLeft: '500px',
-                    bottom: '300px'
-                }}
-                     src='/clickhere.png'
-                     alt="Click here for wedding details!"
+                <img
+                    style={{
+                        position: "relative",
+                        maxWidth: "500px",
+                        maxHeight: "400px",
+                        marginLeft: "500px",
+                        bottom: "300px",
+                    }}
+                    src="/clickhere.png"
+                    alt="Click here for wedding details!"
                 />
-            </a>
-
-
+            </button>
         </Box>
     );
-}
-
+};
 
 export default Hero;
