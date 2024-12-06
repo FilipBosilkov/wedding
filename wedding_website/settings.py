@@ -35,12 +35,12 @@ SECURE_HSTS_SECONDS = 31536000  # Enforce HTTPS for one year
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 ALLOWED_HOSTS = [
-'https://wedding-7ib1.onrender.com',
-'127.0.0.1',
-'https://filipandhailee.com',
-    'https://www.filipandhailee.com',  # if applicable
-
+    'wedding-7ib1.onrender.com',
+    '127.0.0.1',
+    'filipandhailee.com',
+    'www.filipandhailee.com',
 ]
+
 CSRF_TRUSTED_ORIGINS = [
 'https://wedding-7ib1.onrender.com',
 'https://filipandhailee.com',
