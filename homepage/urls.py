@@ -10,10 +10,11 @@ urlpatterns = [
     path('api/registry-items/', views.registry_items, name='registry-items'),
     path('submit-message/', views.submit_message, name='submit-message'),
 
-    # Serve React frontend for all other routes
-    re_path(r'^(?!static/|media/).*$', TemplateView.as_view(template_name='index.html'))  # Exclude static paths
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # Serve React frontend for all other routes, excluding static and media
+    re_path(r'^(?!api/|static/|media/).*$', TemplateView.as_view(template_name='index.html')),
+]
 
-# Only in development: Serve static files
+# Serve media files in development
 if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
