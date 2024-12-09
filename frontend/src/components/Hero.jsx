@@ -40,7 +40,7 @@ const Hero = ({ scrollToDetails }) => {
                 }}
             >
                 <img
-                    src="/static/website_title2.png"
+                    src="/static/title.png"
                     alt="Website Title"
                     style={{
                         width: '100%', // Fill the container's width
