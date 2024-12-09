@@ -21,7 +21,7 @@ const RegistryHero = () => {
             >Check out our Amazon Registry here:
             </Typography>
                 <CircularButton
-                imageUrl="/amazon.png"
+                imageUrl="/static/amazon.png"
                 linkUrl="https://www.amazon.com/wedding/registry/ODKD2NVV63EC"/>
 
             <Typography
@@ -42,7 +42,7 @@ const RegistryHero = () => {
             </Typography>
 
             <CircularButton
-                imageUrl="/antropologie.jpg"
+                imageUrl="/static/antropologie.jpg"
                 linkUrl="https://www.anthropologie.com/registry/listing?registryId=9757F7DC3D64"/>
 
             <Typography

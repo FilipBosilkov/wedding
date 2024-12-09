@@ -35,7 +35,7 @@ const Hero = ({ scrollToDetails }) => {
                     paddingBottom: "0px",
                     marginBottom: "50px",
                 }}
-                src="/website_title2.png"
+                src="/static/website_title2.png"
                 alt="Website Title"
             />
 
@@ -58,7 +58,7 @@ const Hero = ({ scrollToDetails }) => {
                         marginLeft: "500px",
                         bottom: "300px",
                     }}
-                    src="/clickhere.png"
+                    src="/static/clickhere.png"
                     alt="Click here for wedding details!"
                 />
             </button>
