@@ -45,7 +45,7 @@ const Cards = () => {
             const formData = new FormData();
             formData.append('text', text);
 
-            const res = await fetch('http://localhost:8000/submit-message/', {
+            const res = await fetch('https://wedding-7ib1.onrender.com/submit-message/', {
                 method: 'POST',
                 body: formData,  // Only 'text' should be in formData
             });
