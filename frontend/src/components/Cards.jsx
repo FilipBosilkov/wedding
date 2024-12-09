@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import {Card, CardMedia, CardContent, Typography, Box, Button, TextareaAutosize} from '@mui/material';
+import { Card, CardMedia, CardContent, Typography, Box, Button, TextareaAutosize } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -47,9 +47,8 @@ const Cards = () => {
 
             const res = await fetch('https://wedding-7ib1.onrender.com/submit-message/', {
                 method: 'POST',
-                body: formData,  // Only 'text' should be in formData
+                body: formData,
             });
-
 
             const result = await res.json();
             setResponse(result.status || result.error);
@@ -61,8 +60,24 @@ const Cards = () => {
     };
 
     return (
-        <Box display='flex' flexDirection='row' alignItems='center' justifyContent='center' >
-            <Box className="card-slider" sx={{ width: '400px', margin: '50px' }}>
+        <Box
+            display='flex'
+            flexDirection={{ xs: 'column', md: 'row' }}
+            alignItems='center'
+            justifyContent='center'
+            sx={{
+                padding: { xs: '20px', md: '0' },
+                gap: { xs: '20px', md: '0' }
+            }}
+        >
+            <Box
+                className="card-slider"
+                sx={{
+                    width: { xs: '100%', md: '400px' },
+                    margin: { xs: '0 auto', md: '50px' },
+                    maxWidth: '500px'
+                }}
+            >
                 <Slider {...sliderSettings}>
                     {cards.map((card, index) => (
                         <div key={index}>
@@ -73,35 +88,45 @@ const Cards = () => {
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     width: '100%',
-                                    maxWidth: '500px',
-                                    height: '500px',
+                                    height: { xs: 'auto', md: '500px' },
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,
                                 }}
                             >
                                 <a href={card.link} style={{textDecoration:'none'}}>
-                               <CardMedia
-                                    h
-                                    component="img"
-                                    height="400"
-                                    image={card.picture}
-                                    sx={{ objectFit: 'cover' }}
-                                />
+                                    <CardMedia
+                                        component="img"
+                                        height="400"
+                                        image={card.picture}
+                                        sx={{
+                                            objectFit: 'cover',
+                                            height: { xs: '250px', md: '400px' },
+                                            width: '100%'
+                                        }}
+                                    />
 
-                                <CardContent sx={{ textAlign: 'center', p: 2 }}>
-                                    <Typography variant="h5" sx={{ fontFamily: 'Motterdam', color:'black' }}>{card.title}</Typography>
-                                    <Typography variant="body2" sx={{ fontFamily: 'WastedVidney', fontWeight: 'bold' }} color="textSecondary">
-                                        {card.description}
-                                    </Typography>
-                                </CardContent>
+                                    <CardContent sx={{ textAlign: 'center', p: 2 }}>
+                                        <Typography variant="h5" sx={{ fontFamily: 'Motterdam', color:'black' }}>{card.title}</Typography>
+                                        <Typography variant="body2" sx={{ fontFamily: 'WastedVidney', fontWeight: 'bold' }} color="textSecondary">
+                                            {card.description}
+                                        </Typography>
+                                    </CardContent>
                                 </a>
                             </Card>
                         </div>
                     ))}
                 </Slider>
             </Box>
-            <Box textAlign="center" display='flex' flexDirection='column'>
+            <Box
+                textAlign="center"
+                display='flex'
+                flexDirection='column'
+                sx={{
+                    width: { xs: '100%', md: 'auto' },
+                    alignItems: 'center'
+                }}
+            >
                 <TextareaAutosize
                     placeholder="Send us a message"
                     value={text}
@@ -109,6 +134,7 @@ const Cards = () => {
                     style={{
                         marginTop: '80px',
                         width: '400px',
+                        maxWidth: '90%',
                         height: '480px',
                         padding: '10px',
                         fontSize: '16px',
@@ -142,12 +168,11 @@ const Cards = () => {
                 >
                     Send
                 </Button>
-                <Typography sx={{ mt: 2, minHeight: '24px', color: 'white', fontWeight: 'bold' }}>{response}</Typography>
-
+                <Typography sx={{ mt: 2, minHeight: '24px', color: 'white', fontWeight: 'bold', wordWrap: 'break-word' }}>
+                    {response}
+                </Typography>
             </Box>
-
         </Box>
-
     );
 };
 

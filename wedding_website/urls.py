@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('secure-admin-page-jonkler-cart/', admin.site.urls),
     path('', include('homepage.urls')),  # Route all requests to the homepage app
 ]
 
