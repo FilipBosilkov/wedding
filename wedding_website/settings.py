@@ -44,7 +44,7 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
 'https://wedding-7ib1.onrender.com',
 'https://filipandhailee.com',
-'127.0.0.1',
+'http://127.0.0.1',
     'https://www.filipandhailee.com',  # if applicable
 ]
 
@@ -66,7 +66,7 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     'https://wedding-7ib1.onrender.com',
     'https://filipandhailee.com',
-    '127.0.0.1',
+    'http://127.0.0.1',
         'https://www.filipandhailee.com',  # if applicable
 ]
 MIDDLEWARE = [
