@@ -8,7 +8,7 @@ const GalleryCard = () => {
     const [images, setImages] = React.useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/gallery-images').then((response) => {
+        axios.get('https://wedding-7ib1.onrender.com/api/gallery-images').then((response) => {
             setImages(response.data);
             console.log(response.data);
 

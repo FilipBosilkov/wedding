@@ -11,8 +11,8 @@ urlpatterns = [
     path('submit-message/', views.submit_message, name='submit-message'),
 
     # Serve React frontend for all other routes
-    re_path(r'^(?!static/).*$', TemplateView.as_view(template_name='index.html')),  # Exclude static paths
-]
+    re_path(r'^(?!static/|media/).*$', TemplateView.as_view(template_name='index.html'))  # Exclude static paths
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Only in development: Serve static files
 if settings.DEBUG:
