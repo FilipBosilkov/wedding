@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path, re_path
 from django.views.generic import TemplateView
 from . import views
@@ -9,5 +11,9 @@ urlpatterns = [
     path('submit-message/', views.submit_message, name='submit-message'),
 
     # Serve React frontend for all other routes
-    re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+    re_path(r'^(?!static/).*$', TemplateView.as_view(template_name='index.html')),  # Exclude static paths
 ]
+
+# Only in development: Serve static files
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
