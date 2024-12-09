@@ -43,9 +43,19 @@ body {
   background-image: url("../public/backgroundflowers.jpg");
   background-size: cover; /* Ensures the image covers the full viewport */
   background-position: center; /* Centers the background */
-    background-attachment: scroll; /* Allows the image to scroll with content */
-
+  background-attachment: scroll; /* Allows the image to scroll with content */
 }
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../public/backgroundflowers_mobile.jpg"); /* A different background for mobile */
+    background-size: contain; /* Makes sure the image scales down nicely */
+    background-position: top center; /* Adjusts position to ensure it looks good on mobile */
+    background-attachment: scroll; /* Keeps the scrolling behavior */
+  }
+}
+
 
 
 

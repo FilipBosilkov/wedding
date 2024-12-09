@@ -8,7 +8,7 @@ const Hero = ({ scrollToDetails }) => {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            margin="50px"
+            margin="20px"
             marginTop="30px"
             marginBottom="10px"
             color="white"
@@ -19,7 +19,7 @@ const Hero = ({ scrollToDetails }) => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: "50px",
+                    fontSize: {xs: '25px', md: '50px'},
                 }}
                 variant="h4"
                 align="center"
@@ -27,41 +27,60 @@ const Hero = ({ scrollToDetails }) => {
                 Welcome To
             </Typography>
 
-            <img
-                style={{
-                    position: "relative",
-                    maxWidth: "600px",
-                    maxHeight: "500px",
-                    paddingBottom: "0px",
-                    marginBottom: "50px",
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '100%', // Full width of the container
+                    maxWidth: {xs: '300px', md: '600px'}, // Responsive max width
+                    height: 'auto', // Maintain aspect ratio
+                    paddingBottom: '0px',
+                    marginBottom: '50px',
                 }}
-                src="/static/website_title2.png"
-                alt="Website Title"
-            />
+            >
+                <img
+                    src="/static/website_title2.png"
+                    alt="Website Title"
+                    style={{
+                        width: '100%', // Fill the container's width
+                        height: 'auto', // Maintain aspect ratio
+                    }}
+                />
+            </Box>
 
-            <button
+
+            <Box
+                component="button"
                 onClick={scrollToDetails}
-                style={{
+                sx={{
+                    marginTop: {xs: '0px', md: '150px'},
                     cursor: "pointer",
                     background: "none",
                     border: "none",
                     padding: "0",
                     marginBottom: "50px",
                     height: "50px",
+                    display: 'flex', // Center and handle layout
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    bottom: { xs: '150', md: '300px' },
                 }}
             >
-                <img
-                    style={{
-                        position: "relative",
-                        maxWidth: "500px",
-                        maxHeight: "400px",
-                        marginLeft: "500px",
-                        bottom: "300px",
-                    }}
+                <Box
+                    component="img"
                     src="/static/clickhere.png"
                     alt="Click here for wedding details!"
+                    sx={{
+                        position: "relative",
+                        maxWidth: { xs: '200px', md: '500px' }, // Responsive width
+                        maxHeight: { xs: '150px', md: '400px' }, // Responsive height
+                        marginLeft: { xs: '180px', md: '500px' }, // Remove margin on mobile
+                        bottom: { xs: '90px', md: '300px' }, // Remove positioning on mobile
+                    }}
                 />
-            </button>
+            </Box>
+
         </Box>
     );
 };

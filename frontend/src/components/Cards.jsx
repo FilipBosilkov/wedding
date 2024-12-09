@@ -67,7 +67,9 @@ const Cards = () => {
             justifyContent='center'
             sx={{
                 padding: { xs: '20px', md: '0' },
-                gap: { xs: '20px', md: '0' }
+                gap: { xs: '20px', md: '0' },
+                transform: { xs: 'scale(0.5)', md: 'none' },
+                transformOrigin: 'top left'
             }}
         >
             <Box

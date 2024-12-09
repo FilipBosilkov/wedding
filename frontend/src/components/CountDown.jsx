@@ -32,14 +32,15 @@ const CountDown = ({ targetDate }) => {
             borderRadius="10px"
             color="white"
             sx={{
+                fontSize: { xs: '9px', md: '16px' },
                 margin: '5px',
-                width: '600px',
+                width: { xs: '270px', md: '600px' },
                 borderRadius: "10px",
                 color: "white",
                 fontFamily: "Oswald",
                 backgroundColor: 'rgba(0, 0, 0, 0.3)',
                 boxShadow: "0px 0px 4px rgba(1, 1, 1, 0.5)",
-                padding: '10px', // Adjusted for better spacing
+                padding: { xs: '0', md: '10px'}, // Adjusted for better spacing
             }}
         >
             <h2
