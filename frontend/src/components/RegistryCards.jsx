@@ -6,7 +6,7 @@ const RegistryCards = () => {
     const [items, setItems] = React.useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/registry-items')
+        axios.get('https://wedding-7ib1.onrender.com/api/registry-items')
             .then((response) => {
                 setItems(response.data);
                 console.log(response.data);

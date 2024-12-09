@@ -12,19 +12,19 @@ const Cards = () => {
         {
             title: 'About us',
             description: 'A brief story about our lives, how we met and fell in love',
-            picture: './gallery/3.jpg',
+            picture: '/static/3.jpg',
             link: '/aboutus'
         },
         {
             title: 'News',
             description: 'News about the wedding organization and our visa process',
-            picture: '/news.jpg',
+            picture: '/static/news.jpg',
             link: '/'
         },
         {
             title: 'Registry',
             description: 'See our wedding registry and gift ideas',
-            picture: '/amazon.png',
+            picture: '/static/amazon.png',
             link: '/registry'
         },
     ];
