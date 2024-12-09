@@ -18,56 +18,96 @@ function Navbar() {
             <Toolbar sx={{
                 boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: { xs: 'center', md: 'space-between' },
+                alignItems: 'center',
+                flexDirection: { xs: 'column', md: 'row' },
+                padding: { xs: '10px', md: '0 20px' }
             }}>
-                <Button
-                    href="/"
+                <Box
                     sx={{
-                        fontFamily: 'Oswald', fontWeight: 'bold', color: isActive('/') ? '#39454D' : '#FFFFFF', // Highlight active button with gold color
-                        fontSize: '25px', mr: '20px'
+                        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' },
+                        alignItems: 'center'
                     }}
-                > Home</Button>
+                >
+                    <Button
+                        href="/"
+                        sx={{
+                            fontFamily: 'Oswald',
+                            fontWeight: 'bold',
+                            color: isActive('/') ? '#39454D' : '#FFFFFF',
+                            fontSize: '25px',
+                            mr: { xs: 0, md: '20px' },
+                            mb: { xs: '10px', md: 0 }
+                        }}
+                    >Home</Button>
 
-                <Button
-                    href="/Registry"
-                    sx={{
-                        fontFamily: 'Oswald', fontWeight: 'bold', color: isActive('/Registry') ? '#39454D' : '#FFFFFF',
-                        fontSize: '25px', mr: '20px'
-                    }}
-                >Registry</Button>
+                    <Button
+                        href="/Registry"
+                        sx={{
+                            fontFamily: 'Oswald',
+                            fontWeight: 'bold',
+                            color: isActive('/Registry') ? '#39454D' : '#FFFFFF',
+                            fontSize: '25px',
+                            mr: { xs: 0, md: '20px' },
+                            mb: { xs: '10px', md: 0 }
+                        }}
+                    >Registry</Button>
 
-                <Button
-                    href="/Gallery"
-                    sx={{
-                        fontFamily: 'Oswald', fontWeight: 'bold', color: isActive('/Gallery/') ? '#39454D' : '#FFFFFF',
-                        fontSize: '25px', mr: '20px'
-                    }}
-                >Gallery</Button>
+                    <Button
+                        href="/Gallery"
+                        sx={{
+                            fontFamily: 'Oswald',
+                            fontWeight: 'bold',
+                            color: isActive('/Gallery/') ? '#39454D' : '#FFFFFF',
+                            fontSize: '25px',
+                            mr: { xs: 0, md: '20px' },
+                            mb: { xs: '10px', md: 0 }
+                        }}
+                    >Gallery</Button>
+                </Box>
 
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    flexGrow: 1
+                    mt: { xs: '10px', md: 0 },
+                    mb: { xs: '10px', md: 0 }
                 }}>
                     <CountDown targetDate={targetDate} />
                 </Box>
 
-                <Button
-                    href="/AboutUs"
+                <Box
                     sx={{
-                        fontFamily: 'Oswald', fontWeight: 'bold', color: isActive('/AboutUs') ? '#39454D' : '#FFFFFF',
-                        fontSize: '25px', mr: '20px', marginLeft: 'auto'
+                        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' },
+                        alignItems: 'center',
+                        marginLeft: { xs: 0, md: 'auto' }
                     }}
-                >About Us</Button>
+                >
+                    <Button
+                        href="/AboutUs"
+                        sx={{
+                            fontFamily: 'Oswald',
+                            fontWeight: 'bold',
+                            color: isActive('/AboutUs') ? '#39454D' : '#FFFFFF',
+                            fontSize: '25px',
+                            mr: { xs: 0, md: '20px' },
+                            mb: { xs: '10px', md: 0 }
+                        }}
+                    >About Us</Button>
 
-                <Button
-                    href="/Contact"
-                    sx={{
-                        fontFamily: 'Oswald', fontWeight: 'bold', color: isActive('/Contact') ? '#39454D' : '#FFFFFF',
-                        fontSize: '25px', mr: '20px'
-                    }}
-                >Contact Us</Button>
+                    <Button
+                        href="/Contact"
+                        sx={{
+                            fontFamily: 'Oswald',
+                            fontWeight: 'bold',
+                            color: isActive('/Contact') ? '#39454D' : '#FFFFFF',
+                            fontSize: '25px',
+                            mr: { xs: 0, md: '20px' }
+                        }}
+                    >Contact Us</Button>
+                </Box>
             </Toolbar>
         </AppBar>
     );
