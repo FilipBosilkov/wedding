@@ -32,9 +32,10 @@ const CountDown = ({ targetDate }) => {
             borderRadius="10px"
             color="white"
             sx={{
-                fontSize: { xs: '9px', md: '16px' },
+                textAlign: 'center',
+                fontSize: { xs: '10px', md: '16px' },
                 margin: '5px',
-                width: { xs: '270px', md: '600px' },
+                width: { xs: '280px', md: '500px' },
                 borderRadius: "10px",
                 color: "white",
                 fontFamily: "Oswald",
@@ -50,8 +51,7 @@ const CountDown = ({ targetDate }) => {
                     marginTop: '5px',
                     marginBottom: '5px',
                 }}
-            >
-                COUNTDOWN: {timeLeft.days} Days, {timeLeft.hours} Hours, {timeLeft.minutes} Minutes, {timeLeft.seconds} Seconds
+            > {timeLeft.days} Days, {timeLeft.hours} Hours, {timeLeft.minutes} Minutes, {timeLeft.seconds} Seconds Left!
             </h2>
         </Box>
     );

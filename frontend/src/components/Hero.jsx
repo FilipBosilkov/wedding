@@ -33,10 +33,10 @@ const Hero = ({ scrollToDetails }) => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     width: '100%', // Full width of the container
-                    maxWidth: {xs: '300px', md: '600px'}, // Responsive max width
+                    maxWidth: {xs: '500px', md: '600px'}, // Responsive max width
                     height: 'auto', // Maintain aspect ratio
                     paddingBottom: '0px',
-                    marginBottom: '50px',
+                    marginBottom: '0px',
                 }}
             >
                 <img
@@ -59,12 +59,12 @@ const Hero = ({ scrollToDetails }) => {
                     background: "none",
                     border: "none",
                     padding: "0",
-                    marginBottom: "50px",
+                    marginBottom: "0px",
                     height: "50px",
                     display: 'flex', // Center and handle layout
                     justifyContent: 'center',
                     alignItems: 'center',
-                    bottom: { xs: '150', md: '300px' },
+                    bottom: { xs: '0px', md: '300px' },
                 }}
             >
                 <Box
@@ -73,10 +73,10 @@ const Hero = ({ scrollToDetails }) => {
                     alt="Click here for wedding details!"
                     sx={{
                         position: "relative",
-                        maxWidth: { xs: '200px', md: '500px' }, // Responsive width
-                        maxHeight: { xs: '150px', md: '400px' }, // Responsive height
-                        marginLeft: { xs: '180px', md: '500px' }, // Remove margin on mobile
-                        bottom: { xs: '90px', md: '300px' }, // Remove positioning on mobile
+                        maxWidth: { xs: '230px', md: '500px' }, // Responsive width
+                        maxHeight: { xs: '200px', md: '400px' }, // Responsive height
+                        marginLeft: { xs: '140px', md: '500px' }, // Remove margin on mobile
+                        bottom: { xs: '30px', md: '250px' }, // Remove positioning on mobile
                     }}
                 />
             </Box>

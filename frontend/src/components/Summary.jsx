@@ -11,8 +11,8 @@ const Summary = forwardRef((props, ref) => {
             textAlign="center"
             sx={{
                 margin: { xs: '10px', md: '200px' }, // Adjust margins for mobile and desktop
-                marginBottom: { xs: '50px', md: '200px' },
-                marginTop: { xs: '20px', md: '100px' },
+                marginBottom: { xs: '10px', md: '200px' },
+                marginTop: { xs: '0px', md: '100px' },
                 color: 'white',
                 textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)"
             }}

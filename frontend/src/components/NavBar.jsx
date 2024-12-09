@@ -34,13 +34,14 @@ function Navbar() {
     ];
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "rgba(121, 145, 160, 1)" }}>
+        <AppBar position="static" sx={{ backgroundColor: "rgba(121, 145, 160, 1)",  }}>
             <Toolbar sx={{
                 boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
                 display: "flex",
                 justifyContent: { xs: 'space-between', md: 'space-between' },
                 alignItems: 'center',
-                padding: { xs: '10px', md: '0 20px' }
+                padding: { xs: '0px', md: '0 20px' },
+                paddingLeft: { xs: '10px', md: '0 20px' }
             }}>
                 {/* Hamburger Menu for Mobile */}
                 <IconButton

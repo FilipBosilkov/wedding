@@ -66,18 +66,18 @@ const Cards = () => {
             alignItems='center'
             justifyContent='center'
             sx={{
-                padding: { xs: '20px', md: '0' },
+                padding: { xs: '0px', md: '0' },
+                paddingTop: { xs: '10px', md: '0' },
                 gap: { xs: '20px', md: '0' },
-                transform: { xs: 'scale(0.5)', md: 'none' },
-                transformOrigin: 'top left'
+                transform: { xs: 'none', md: 'none' },
             }}
         >
             <Box
                 className="card-slider"
                 sx={{
-                    width: { xs: '100%', md: '400px' },
+                    width: { xs: '250px', md: '400px' },
                     margin: { xs: '0 auto', md: '50px' },
-                    maxWidth: '500px'
+                    maxWidth: '800px'
                 }}
             >
                 <Slider {...sliderSettings}>
@@ -87,6 +87,7 @@ const Cards = () => {
                                 className="card"
                                 sx={{
                                     display: 'flex',
+                                    marginBottom: '0px',
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     width: '100%',
@@ -108,7 +109,7 @@ const Cards = () => {
                                         }}
                                     />
 
-                                    <CardContent sx={{ textAlign: 'center', p: 2 }}>
+                                    <CardContent sx={{ textAlign: 'center', p: { xs: 1, md :2}, height: { xs: '50px' }}}>
                                         <Typography variant="h5" sx={{ fontFamily: 'Motterdam', color:'black' }}>{card.title}</Typography>
                                         <Typography variant="body2" sx={{ fontFamily: 'WastedVidney', fontWeight: 'bold' }} color="textSecondary">
                                             {card.description}
@@ -134,10 +135,10 @@ const Cards = () => {
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     style={{
-                        marginTop: '80px',
+                        marginTop: '75px',
                         width: '400px',
                         maxWidth: '90%',
-                        height: '480px',
+                        height: '482px',
                         padding: '10px',
                         fontSize: '16px',
                         fontFamily: 'WastedVidney',
@@ -146,18 +147,20 @@ const Cards = () => {
                         border: '1px solid #ccc',
                         resize: 'none',
                     }}
+                    className="textarea"
                 />
                 <Button
                     variant="contained"
                     color="primary"
                     onClick={handleSubmit}
                     sx={{
-                        marginTop: '20px',
+                        marginTop: '12px',
                         backgroundColor: '#98BD42',
                         color: '#FFF',
                         fontFamily: 'Oswald, sans-serif',
+                        fontSize: {xs: '10px', md: '15px'},
                         fontWeight: 'bold',
-                        padding: '10px 30px',
+                        padding: {xs: '2px 15px', md: '10px 30px'},
                         borderRadius: '50px',
                         boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.2)',
                         transition: 'transform 0.3s ease, background-color 0.3s ease',

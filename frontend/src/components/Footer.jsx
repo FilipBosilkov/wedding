@@ -6,6 +6,7 @@ const Footer = () => {
         <Box
             component="footer"
             sx={{
+                padding: {xs: '4px', md:'10px'},
                 py: 3,
                 px: 2,
                 mt: 'auto',
@@ -16,24 +17,27 @@ const Footer = () => {
             <Container>
                 <Box
                     display='flex'
-                    flexDirection={{ xs: 'column', md: 'row' }}
+                    flexDirection={{ xs: 'row', md: 'row' }}
                     color="#D3D3D3"
-                    gap={{ xs: '20px', md: '0px' }}
+                    gap={{ xs: '50px', md: '0px' }}
                     justifyContent={{ xs: 'flex-start', md: 'flex-start' }}
                     alignItems={{ xs: 'flex-start', md: 'center' }}
+
                 >
                     {/* Quick Links Section */}
-                    <Box item xs={12} sm={4} sx={{ mb: { xs: '20px', md: 0 }, mr: { md: '200px' } }}>
-                        <Typography variant="h6" gutterBottom fontFamily='Oswald'>
+                    <Box item xs={12} sm={4} sx={{ mb: { xs: '0px', md: 0 }, mr: { md: '200px' } }}>
+                        <Typography variant="h6" gutterBottom fontFamily='Oswald' sx={{fontSize: {xs: '15px', md: '20px'}}}>
                             Quick Links
                         </Typography>
-                        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }}}>
+                        <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: 'row' }}}>
                             <Link
                                 href="/"
                                 color="inherit"
                                 variant="body2"
                                 fontFamily='Oswald'
-                                sx={{ mr: { md: '20px' }, mb: { xs: '10px', md: 0 } }}
+
+                                sx={{ mr: {xs:'8px', md: '20px' }, mb: { xs: '0px', md: 0 }, fontSize: {xs: '10px', md: '15px'}
+                                }}
                             >
                                 Home
                             </Link>
@@ -42,7 +46,7 @@ const Footer = () => {
                                 color="inherit"
                                 variant="body2"
                                 fontFamily='Oswald'
-                                sx={{ mr: { md: '20px' }, mb: { xs: '10px', md: 0 } }}
+                                sx={{ mr: {xs:'8px', md: '20px' }, mb: { xs: '0px', md: 0 }, fontSize: {xs: '10px', md: '15px'}}}
                             >
                                 Registry
                             </Link>
@@ -51,7 +55,7 @@ const Footer = () => {
                                 color="inherit"
                                 variant="body2"
                                 fontFamily='Oswald'
-                                sx={{ mr: { md: '20px' } }}
+                                sx={{ mr: {xs:'8px', md: '20px' }, fontSize: {xs: '10px', md: '15px'} }}
                             >
                                 Contact
                             </Link>
@@ -59,17 +63,17 @@ const Footer = () => {
                     </Box>
 
                     {/* Follow Us Section */}
-                    <Box item xs={12} sm={4} sx={{ mb: { xs: '20px', md: 0 } }}>
-                        <Typography variant="h6" gutterBottom fontFamily='Oswald'>
+                    <Box item xs={12} sm={4} sx={{ mb: { xs: '0px', md: 0 }, fontSize: {xs: '10px', md: '15px'} }}>
+                        <Typography variant="h6" gutterBottom fontFamily='Oswald' sx={{fontSize: {xs: '15px', md: '20px'}}}>
                             Follow Us
                         </Typography>
-                        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }}}>
+                        <Box sx={{ display: 'flex', flexDirection: { xs: 'row', md: 'row' }}}>
                             <Link
                                 href="https://www.facebook.com/filip.bosilkov.33/"
                                 color="inherit"
                                 variant="body2"
                                 fontFamily='Oswald'
-                                sx={{ mr: { md: '20px' }, mb: { xs: '10px', md: 0 } }}
+                                sx={{ mr: {xs:'8px', md: '20px' }, mb: { xs: '0px', md: 0 }, fontSize: {xs: '10px', md: '15px'} }}
                             >
                                 Facebook
                             </Link>
@@ -78,6 +82,7 @@ const Footer = () => {
                                 color="inherit"
                                 variant="body2"
                                 fontFamily='Oswald'
+                                sx={{fontSize: {xs: '10px', md: '15px'}}}
                             >
                                 Instagram
                             </Link>
@@ -85,7 +90,7 @@ const Footer = () => {
                     </Box>
                 </Box>
                 <Box mt={3} textAlign="center" >
-                    <Typography variant="body2" color="#D3D3D3">
+                    <Typography variant="body2" color="#D3D3D3" sx={{fontSize: {xs: '10px', md: '15px'}}}>
                         &copy; {new Date().getFullYear()} Hailee And Filip. All rights reserved.
                     </Typography>
                 </Box>

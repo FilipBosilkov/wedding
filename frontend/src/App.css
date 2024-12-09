@@ -45,7 +45,14 @@ body {
   background-position: center; /* Centers the background */
   background-attachment: scroll; /* Allows the image to scroll with content */
 }
-
+@media (max-width: 768px) {
+  .textarea {
+    height: 50px !important; /* Override inline styles */
+    font-size: 12px !important;
+    margin-top: 15px !important;
+    max-width: 64% !important;
+  }
+}
 /* Mobile optimization */
 @media (max-width: 768px) {
   body {
