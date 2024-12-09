@@ -40,7 +40,7 @@
 }
 /*//#D8BFD8 0%, #96B8E4 100%*/
 body {
-  background-image: url("../public/backgroundflowers.jpg");
+  background-image: url("../public/backgroundflowers.webp");
   background-size: cover; /* Ensures the image covers the full viewport */
   background-position: center; /* Centers the background */
   background-attachment: scroll; /* Allows the image to scroll with content */
@@ -56,7 +56,7 @@ body {
 /* Mobile optimization */
 @media (max-width: 768px) {
   body {
-    background-image: url("../public/backgroundflowers_mobile.jpg"); /* A different background for mobile */
+    background-image: url("../public/backgroundflowers_mobile.webp"); /* A different background for mobile */
     background-size: contain; /* Makes sure the image scales down nicely */
     background-position: top center; /* Adjusts position to ensure it looks good on mobile */
     background-attachment: scroll; /* Keeps the scrolling behavior */
