@@ -73,11 +73,19 @@ const GalleryCard = () => {
                                     }}
                                 />
 
-                                <CardContent style={{textAlign: 'center', justifyContent: 'center', margin:'auto'}}>
-                                    <Typography sx={{fontFamily: 'WastedVidney'}}>
+                                <CardContent
+                                    sx={{
+                                        textAlign: 'center',
+                                        justifyContent: 'center',
+                                        margin: 'auto',
+                                        height: { xs: '10%', md: 'auto' }, // Reduce height to 10% of its current size on mobile
+                                    }}
+                                >
+                                    <Typography sx={{ fontFamily: 'WastedVidney' }}>
                                         {image.description}
                                     </Typography>
                                 </CardContent>
+
                             </Card>
                         </div>
                     ))}
