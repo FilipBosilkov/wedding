@@ -43,7 +43,7 @@ const GalleryCard = () => {
                 variant="h4"
                 align="center"
             >Our Gallery</Typography>
-            <Box className="gallery-slider" sx={{ width: {xs: '300px', md: '700px'}, margin: '200px', marginTop: '100px' }}>
+            <Box className="gallery-slider" sx={{ width: {xs: '300px', md: '700px'}, margin: '200px', marginTop: {xs: '0px', md: '100px'} }}>
                 <Slider {...sliderSettings}>
                     {images.map((image) => (
                         <div key={image.title}>
@@ -65,8 +65,14 @@ const GalleryCard = () => {
                                     component="img"
                                     height="500"
                                     image={image.image}
-                                    sx={{ objectFit: 'cover' }}
+                                    sx={{
+                                        objectFit: { xs: 'contain', md: 'cover' }, // Use 'contain' for mobile and 'cover' for larger devices
+                                        objectPosition: 'center',
+                                        width: '100%',
+                                        height: { xs: '300px', md: '500px' } // Adjust height for mobile devices
+                                    }}
                                 />
+
                                 <CardContent style={{textAlign: 'center', justifyContent: 'center', margin:'auto'}}>
                                     <Typography sx={{fontFamily: 'WastedVidney'}}>
                                         {image.description}
