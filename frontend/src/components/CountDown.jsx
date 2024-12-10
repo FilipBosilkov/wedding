@@ -35,7 +35,7 @@ const CountDown = ({ targetDate }) => {
                 textAlign: 'center',
                 fontSize: { xs: '10px', md: '16px' },
                 margin: '5px',
-                width: { xs: '280px', md: '500px' },
+                width: { xs: '220px', md: '520px' },
                 borderRadius: "10px",
                 color: "white",
                 fontFamily: "Oswald",

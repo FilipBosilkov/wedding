@@ -34,7 +34,7 @@ const GalleryCard = () => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: '60px',
+                    fontSize: {xs: '35px',md: '60px'},
                     color: 'white',
                     marginTop: '30px'
 
@@ -43,7 +43,7 @@ const GalleryCard = () => {
                 variant="h4"
                 align="center"
             >Our Gallery</Typography>
-            <Box className="gallery-slider" sx={{ width: '700px', margin: '200px', marginTop: '100px' }}>
+            <Box className="gallery-slider" sx={{ width: {xs: '300px', md: '700px'}, margin: '200px', marginTop: '100px' }}>
                 <Slider {...sliderSettings}>
                     {images.map((image) => (
                         <div key={image.title}>
