@@ -98,7 +98,7 @@ const GalleryCard = () => {
                                     }}
                                 >
                                     <Typography
-                                        sx={{ fontFamily: 'WastedVidney', padding: '2px', color: 'white' }}
+                                        sx={{ fontFamily: 'WastedVidney', padding: '2px', color: 'black' }}
                                     >
                                         {image.description}
                                     </Typography>
