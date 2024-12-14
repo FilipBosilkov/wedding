@@ -36,7 +36,7 @@ const GalleryCard = () => {
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
                     fontSize: {xs: '35px',md: '60px'},
                     color: 'white',
-                    marginTop: '30px'
+                    marginTop: '50px'
 
 
                 }}
@@ -55,7 +55,7 @@ const GalleryCard = () => {
                                     alignItems: 'center',
                                     width: '100%',
                                     maxWidth: '700px',
-                                    height: '600px',
+                                    height: {xs: '300px', md: '600px'},
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,

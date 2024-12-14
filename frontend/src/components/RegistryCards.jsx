@@ -42,7 +42,8 @@ const RegistryCards = () => {
                     width: { xs: '280px', md: '400px' },
                     margin: { xs: '0 auto', md: '50px' },
                     maxWidth: '800px',
-                    marginBottom: '400px'
+                    marginBottom: '200px', // Add a large bottom margin to push away from the footer
+                    paddingBottom: '50px',
                 }}
             >
                 <Slider {...sliderSettings}>
