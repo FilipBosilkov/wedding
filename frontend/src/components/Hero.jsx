@@ -10,7 +10,7 @@ const Hero = ({ scrollToDetails }) => {
             alignItems="center"
             margin="20px"
             marginTop="30px"
-            marginBottom="10px"
+            marginBottom={{xs: "25px", md: '0px'}}
             color="white"
         >
             <Typography
@@ -58,7 +58,7 @@ const Hero = ({ scrollToDetails }) => {
                     cursor: "pointer",
                     background: "none",
                     border: "none",
-                    padding: "0",
+                    padding: "0px",
                     marginBottom: "0px",
                     height: "50px",
                     display: 'flex', // Center and handle layout
@@ -77,6 +77,8 @@ const Hero = ({ scrollToDetails }) => {
                         maxHeight: { xs: '200px', md: '400px' }, // Responsive height
                         marginLeft: { xs: '140px', md: '500px' }, // Remove margin on mobile
                         bottom: { xs: '30px', md: '250px' }, // Remove positioning on mobile
+                        marginBottom: "0px",
+
                     }}
                 />
             </Box>
