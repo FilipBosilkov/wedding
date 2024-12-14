@@ -57,7 +57,7 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url("../public/backgroundflowers_mobile.webp"); /* A different background for mobile */
-    background-size: contain; /* Makes sure the image scales down nicely */
+    background-size: cover; /* Makes sure the image scales down nicely */
     background-position: top center; /* Adjusts position to ensure it looks good on mobile */
     background-attachment: scroll; /* Keeps the scrolling behavior */
   }

@@ -11,10 +11,11 @@ const RegistryHero = () => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: '30px',
+                    fontSize: {xs:'25px', md: '30px'},
                     color: 'white',
-                    marginTop: '30px'
-
+                    marginTop: '30px',
+                    paddingLeft: '20px',
+                    paddingRight: '20px',
                 }}
                 variant="h4"
                 align="center"
@@ -30,9 +31,11 @@ const RegistryHero = () => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: '30px',
+                    fontSize: {xs:'25px', md: '30px'},
                     color: 'white',
-                    marginTop: '30px'
+                    marginTop: '30px',
+                    paddingLeft: '20px',
+                    paddingRight: '20px',
                 }}
                 variant="h4"
                 align="center"
@@ -51,9 +54,9 @@ const RegistryHero = () => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: '60px',
+                    fontSize: {xs: '50px', md: '60px'},
                     color: 'white',
-                    marginTop: '90px'
+                    marginTop: {xs: '60px', md: '90px'}
 
 
                 }}
