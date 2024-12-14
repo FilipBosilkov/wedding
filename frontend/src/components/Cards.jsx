@@ -36,10 +36,10 @@ const Cards = () => {
             link: '/aboutus'
         },
         {
-            title: 'News',
-            description: 'News about the wedding organization and our visa process',
+            title: 'Hotels',
+            description: 'Hotels and Camping spots around Minot for our guests!',
             picture: '/static/news.jpg',
-            link: '/'
+            link: '/hotels'
         },
         {
             title: 'Registry',

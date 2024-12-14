@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
-import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Typography, useMediaQuery, useTheme } from '@mui/material';
 import axios from "axios";
 
 const GalleryCard = () => {
@@ -18,13 +18,16 @@ const GalleryCard = () => {
             });
     }, []);
 
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+
     const sliderSettings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: isDesktop,         // Show arrows only on desktop
         autoplay: true,
         autoplaySpeed: 3000,
     };
@@ -58,7 +61,6 @@ const GalleryCard = () => {
                     width: { xs: '90%', md: '700px' },
                     mt: { xs: '20px', md: '100px' },
                     mb: { xs: '50px', md: '200px' },
-                    // Removed large margins that caused spacing issues on mobile
                 }}
             >
                 <Slider {...sliderSettings}>
@@ -75,7 +77,6 @@ const GalleryCard = () => {
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,
-                                    // Let the card height adjust automatically
                                     height: 'auto'
                                 }}
                             >
@@ -86,23 +87,18 @@ const GalleryCard = () => {
                                         width: '100%',
                                         height: 'auto',
                                         objectFit: 'contain',
-                                        // Removed absolute positioning to avoid pushing content away
                                     }}
                                 />
                                 <CardContent
                                     sx={{
                                         textAlign: 'center',
                                         justifyContent: 'center',
-                                        padding: '8px',
-                                        // Removed extra margins that pushed the text down
+                                        margin: 'auto',
+                                        padding: '1px'
                                     }}
                                 >
                                     <Typography
-                                        sx={{
-                                            fontFamily: 'WastedVidney',
-                                            padding: '2px',
-                                            color: 'white'
-                                        }}
+                                        sx={{ fontFamily: 'WastedVidney', padding: '2px', color: 'white' }}
                                     >
                                         {image.description}
                                     </Typography>
