@@ -19,7 +19,7 @@ const Hero = ({ scrollToDetails }) => {
                     WebkitBackgroundClip: "text",
                     textAlign: "center",
                     textShadow: "4px 4px 6px rgba(0, 1, 1, 0.9)",
-                    fontSize: {xs: '25px', md: '50px'},
+                    fontSize: {xs: '40px', md: '50px'},
                 }}
                 variant="h4"
                 align="center"
@@ -73,10 +73,10 @@ const Hero = ({ scrollToDetails }) => {
                     alt="Click here for wedding details!"
                     sx={{
                         position: "relative",
-                        maxWidth: { xs: '230px', md: '500px' }, // Responsive width
-                        maxHeight: { xs: '200px', md: '400px' }, // Responsive height
-                        marginLeft: { xs: '140px', md: '500px' }, // Remove margin on mobile
-                        bottom: { xs: '30px', md: '250px' }, // Remove positioning on mobile
+                        maxWidth: { xs: '250px', md: '500px' }, // Responsive width
+                        maxHeight: { xs: '300px', md: '400px' }, // Responsive height
+                        marginLeft: { xs: '170px', md: '500px' }, // Remove margin on mobile
+                        bottom: { xs: '50px', md: '250px' }, // Remove positioning on mobile
                         marginBottom: "0px",
 
                     }}

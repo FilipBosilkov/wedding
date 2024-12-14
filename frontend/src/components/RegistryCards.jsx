@@ -39,10 +39,10 @@ const RegistryCards = () => {
                 className="card-slider"
                 sx={{
                     order: { xs: 1, md: 0 },
-                    width: { xs: '250px', md: '400px' },
+                    width: { xs: '280px', md: '400px' },
                     margin: { xs: '0 auto', md: '50px' },
                     maxWidth: '800px',
-                    marginBottom: '200px'
+                    marginBottom: '400px'
                 }}
             >
                 <Slider {...sliderSettings}>
