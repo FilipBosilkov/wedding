@@ -3,8 +3,6 @@ import { Box, Card, CardContent, CardMedia, Typography, useTheme, useMediaQuery 
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactUs = () => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <Box margin={{ xs: '10px', sm: '20px', md: '30px' }}>

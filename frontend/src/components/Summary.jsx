@@ -40,7 +40,7 @@ const Summary = forwardRef((props, ref) => {
                     padding: { xs: '10px', md: '0' }, // Add padding for mobile readability
                 }}
             >
-                Thank you for visiting our wedding page. The wedding details as of right now are still quite muddy. We are waiting on Filip's visa interview, which will be the deciding factor of when the wedding would be celebrated.
+                Thank you for visiting our wedding page! Everything has gone according to plan! Filip had his visa approved, and is going to be soon reunited with Hailee!
             </Typography>
             <Typography
                 variant="body1"
@@ -53,7 +53,8 @@ const Summary = forwardRef((props, ref) => {
                     padding: { xs: '10px', md: '0' }, // Add padding for mobile readability
                 }}
             >
-                We remain optimistic though, and we are hoping that in the likely scenario that he gets his visa within the next few months, we would have enough time to organize, and hold the wedding on July 5th, 2025. The moment we have more details, the guests will be accordingly informed, and this page will be updated. The wedding invitations will have the same details you will find on this page.
+                The wedding is going to be officially held on Saturday, July 5th, 2025. The location of the wedding is 1405 Palomino St. Minot, North Dakota, 58703.
+                For RSVP, you can do it through mail, or electronically using our website. For any questions please feel free to contact us!
             </Typography>
         </Box>
     );
