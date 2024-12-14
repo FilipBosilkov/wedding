@@ -65,7 +65,7 @@ const HotelsCard = () => {
                         order: { xs: 1, md: 0 }, // Show slider second on mobile (xs), first on desktop (md)
                         width: { xs: '290px', md: '600px' },
                         margin: { xs: '0 auto', md: '50px' },
-                        marginBottom: { xs: '50px', md: '100px' },
+                        marginBottom: { xs: '150px', md: '100px' },
                         maxWidth: '800px',
                     }}
                 >

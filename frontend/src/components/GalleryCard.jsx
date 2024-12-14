@@ -8,12 +8,17 @@ const GalleryCard = () => {
     const [images, setImages] = React.useState([]);
 
     useEffect(() => {
-        axios.get('https://wedding-7ib1.onrender.com/api/gallery-images').then((response) => {
-            setImages(response.data);
-            console.log(response.data);
-
-        }).catch(error => { console.log(error); });
+        axios.get('https://wedding-7ib1.onrender.com/api/gallery-images')
+            .then((response) => {
+                const reversedImages = response.data.reverse(); // Reverse the order of the images
+                setImages(reversedImages);
+                console.log(reversedImages);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }, []);
+
 
     const sliderSettings = {
         dots: true,
@@ -43,7 +48,8 @@ const GalleryCard = () => {
                 variant="h4"
                 align="center"
             >Our Gallery</Typography>
-            <Box className="gallery-slider" sx={{ width: {xs: '300px', md: '700px'}, margin: '200px', marginTop: {xs: '0px', md: '100px'} }}>
+            <Box className="gallery-slider" sx={{ width: {xs: '300px', md: '700px'}, margin: '200px', marginTop: {xs: '0px', md: '100px'},
+                marginBottom: {xs: '250px', md: '200px'}}}>
                 <Slider {...sliderSettings}>
                     {images.map((image) => (
                         <div key={image.title}>
@@ -91,10 +97,10 @@ const GalleryCard = () => {
                                         textAlign: 'center',
                                         justifyContent: 'center',
                                         margin: 'auto',
-                                        height: { xs: '10%', md: 'auto' }, // Reduce height to 10% of its current size on mobile
+                                        padding: '1px'
                                     }}
                                 >
-                                    <Typography sx={{ fontFamily: 'WastedVidney', padding: '10px' }}>
+                                    <Typography sx={{ fontFamily: 'WastedVidney', padding: '2px' }}>
                                         {image.description}
                                     </Typography>
                                 </CardContent>
