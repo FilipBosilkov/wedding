@@ -65,6 +65,7 @@ const Hero = ({ scrollToDetails }) => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     bottom: { xs: '0px', md: '300px' },
+
                 }}
             >
                 <Box
@@ -73,11 +74,13 @@ const Hero = ({ scrollToDetails }) => {
                     alt="Click here for wedding details!"
                     sx={{
                         position: "relative",
-                        maxWidth: { xs: '250px', md: '500px' }, // Responsive width
+                        maxWidth: { xs: '200px', md: '500px' }, // Responsive width
                         maxHeight: { xs: '300px', md: '400px' }, // Responsive height
-                        marginLeft: { xs: '170px', md: '500px' }, // Remove margin on mobile
+                        marginLeft: { xs: '130px', md: '500px' }, // Remove margin on mobile
                         bottom: { xs: '50px', md: '250px' }, // Remove positioning on mobile
                         marginBottom: "0px",
+                        overflow: 'hidden'
+
 
                     }}
                 />

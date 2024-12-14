@@ -55,7 +55,7 @@ const GalleryCard = () => {
                                     alignItems: 'center',
                                     width: '100%',
                                     maxWidth: '700px',
-                                    height: {xs: '400px', md: '600px'},
+                                    height: {xs: '300px', md: '600px'},
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,
@@ -65,25 +65,26 @@ const GalleryCard = () => {
                                     sx={{
                                         position: 'relative',
                                         width: '100%',
-                                        paddingTop: '75%', // This sets a 4:3 aspect ratio (adjust as needed)
-                                        overflow: 'hidden',
-                                        backgroundColor: '#f0f0f0', // Optional placeholder color
+                                        paddingTop: { xs: '75%', md: 'unset' }, // 4:3 aspect ratio only on mobile, no padding for desktop
+                                        overflow: { xs: 'hidden', md: 'unset' }, // Restrict overflow only on mobile
+                                        backgroundColor: { xs: '#f0f0f0', md: 'transparent' }, // Optional placeholder for mobile
                                     }}
                                 >
                                     <CardMedia
                                         component="img"
                                         image={image.image}
                                         sx={{
-                                            position: 'absolute',
-                                            top: '50%',
-                                            left: '50%',
-                                            width: '100%',
-                                            height: '100%',
-                                            transform: 'translate(-50%, -50%)',
-                                            objectFit: 'contain',
+                                            position: { xs: 'absolute', md: 'relative' }, // Absolute positioning for mobile, normal for desktop
+                                            top: { xs: '50%', md: 'unset' },
+                                            left: { xs: '50%', md: 'unset' },
+                                            width: { xs: '100%', md: 'auto' },
+                                            height: { xs: '100%', md: 'auto' },
+                                            transform: { xs: 'translate(-50%, -50%)', md: 'none' }, // Centering for mobile only
+                                            objectFit: { xs: 'contain', md: 'cover' }, // Contain on mobile, cover on desktop
                                         }}
                                     />
                                 </Box>
+
 
                                 <CardContent
                                     sx={{
@@ -93,7 +94,7 @@ const GalleryCard = () => {
                                         height: { xs: '10%', md: 'auto' }, // Reduce height to 10% of its current size on mobile
                                     }}
                                 >
-                                    <Typography sx={{ fontFamily: 'WastedVidney' }}>
+                                    <Typography sx={{ fontFamily: 'WastedVidney', padding: '10px' }}>
                                         {image.description}
                                     </Typography>
                                 </CardContent>

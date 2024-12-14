@@ -318,6 +318,7 @@ const Cards = () => {
                                 sx={{
                                     display: 'flex',
                                     marginBottom: '0px',
+                                    marginRight: '0px',
                                     marginTop: '23px',
                                     flexDirection: 'column',
                                     alignItems: 'center',
