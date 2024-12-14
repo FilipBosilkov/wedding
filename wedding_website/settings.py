@@ -109,9 +109,10 @@ WSGI_APPLICATION = 'wedding_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': '/data/db.sqlite3',  # Store the SQLite file on the persistent disk
     }
 }
+
 
 
 # Password validation
