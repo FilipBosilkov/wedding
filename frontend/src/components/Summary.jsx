@@ -23,7 +23,7 @@ const Summary = forwardRef((props, ref) => {
                 gutterBottom
                 sx={{
                     fontFamily: 'Motterdam',
-                    fontSize: { xs: '30px', md: '36px' }, // Responsive font size
+                    fontSize: { xs: '30px', md: '45px' }, // Responsive font size
                 }}
             >
                 Wedding Details

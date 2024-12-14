@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardContent, CardMedia, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactUs = () => {
