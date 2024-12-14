@@ -31,6 +31,7 @@ function Navbar() {
         { text: 'Gallery', href: '/Gallery' },
         { text: 'About Us', href: '/AboutUs' },
         { text: 'Contact Us', href: '/Contact' },
+        { text: 'Hotels', href: '/Hotels'}
     ];
 
     return (

@@ -55,23 +55,35 @@ const GalleryCard = () => {
                                     alignItems: 'center',
                                     width: '100%',
                                     maxWidth: '700px',
-                                    height: {xs: '300px', md: '600px'},
+                                    height: {xs: '400px', md: '600px'},
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,
                                 }}
                             >
-                                <CardMedia
-                                    component="img"
-                                    height="500"
-                                    image={image.image}
+                                <Box
                                     sx={{
-                                        objectFit: { xs: 'contain', md: 'cover' }, // Use 'contain' for mobile and 'cover' for larger devices
-                                        objectPosition: 'center',
+                                        position: 'relative',
                                         width: '100%',
-                                        height: { xs: '300px', md: '500px' } // Adjust height for mobile devices
+                                        paddingTop: '75%', // This sets a 4:3 aspect ratio (adjust as needed)
+                                        overflow: 'hidden',
+                                        backgroundColor: '#f0f0f0', // Optional placeholder color
                                     }}
-                                />
+                                >
+                                    <CardMedia
+                                        component="img"
+                                        image={image.image}
+                                        sx={{
+                                            position: 'absolute',
+                                            top: '50%',
+                                            left: '50%',
+                                            width: '100%',
+                                            height: '100%',
+                                            transform: 'translate(-50%, -50%)',
+                                            objectFit: 'contain',
+                                        }}
+                                    />
+                                </Box>
 
                                 <CardContent
                                     sx={{

@@ -6,6 +6,7 @@ import Gallery from "./pages/Gallery";
 import Registry from "./pages/Registry";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
+import Hotels from "./pages/Hotels";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
                   <Route path='/Registry' element={<Registry />}></Route>
                   <Route path='/AboutUs' element={<AboutUs />}></Route>
                   <Route path='/Contact' element={<Contact />}></Route>
+                  <Route path='/Hotels' element={<Hotels />}></Route>
            </Routes>
       </Layout>
       </Router>
