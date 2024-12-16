@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('secure-admin-page-jonkler-cart/', admin.site.urls),
+    path("verify-captcha/", views.verify_captcha, name="verify_captcha"),
     path('', include('homepage.urls')),  # Route all requests to the homepage app
 ]
 

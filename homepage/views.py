@@ -17,6 +17,8 @@ from .serializers import RegistryItemSerializer, MessageSerializer, NewsSerializ
 
 # Create your views here.
 
+RECAPTCHA_SECRET_KEY = "6Lf7wZ0qAAAAAFD47btURuA1rhp3EK1DddJsfEhv"  # Replace with your secret key
+
 def index(request):
     return render(request, 'index.html')
 
@@ -41,6 +43,29 @@ def submit_message(request):
 def home(request):
     return render(request, 'homepage/home.html', {'form': MessageForm()})
 
+
+@csrf_exempt
+def verify_captcha(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        captcha_token = data.get("captcha_token")
+
+        # Verify the reCAPTCHA token with Google
+        response = requests.post(
+            "https://www.google.com/recaptcha/api/siteverify",
+            data={
+                "secret": RECAPTCHA_SECRET_KEY,
+                "response": captcha_token,
+            },
+        )
+
+        result = response.json()
+
+        if result.get("success"):
+            return JsonResponse({"message": "RSVP submitted successfully!"}, status=200)
+        else:
+            return JsonResponse({"message": "Invalid CAPTCHA. Please try again."}, status=400)
+    return JsonResponse({"message": "Invalid request method"}, status=405)
 
 @api_view(['GET'])
 def registry_items(request):

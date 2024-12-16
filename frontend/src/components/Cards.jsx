@@ -9,16 +9,14 @@ import {
     FormControlLabel,
     FormControl,
     FormLabel,
-    CardMedia, CardContent
+    CardMedia,
+    CardContent
 } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from "@mui/material/Card";
-
-
-
-
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Cards = () => {
     const [name, setName] = useState('');
@@ -27,6 +25,13 @@ const Cards = () => {
     const [attendance, setAttendance] = useState('');
     const [message, setMessage] = useState('');
     const [response, setResponse] = useState('');
+
+    // Validation error states
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+
+    // reCAPTCHA token state
+    const [captchaToken, setCaptchaToken] = useState('');
 
     const cards = [
         {
@@ -60,9 +65,56 @@ const Cards = () => {
         autoplaySpeed: 3000,
     };
 
+    const validateForm = () => {
+        let valid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Reset errors
+        setNameError('');
+        setEmailError('');
+        setResponse('');
+
+        if (!name.trim()) {
+            setNameError('Name is required');
+            valid = false;
+        }
+
+        if (!email.trim()) {
+            setEmailError('Email is required');
+            valid = false;
+        } else if (!emailRegex.test(email)) {
+            setEmailError('Please enter a valid email address');
+            valid = false;
+        }
+
+        return valid;
+    };
+
     const handleSubmit = async () => {
+        if (!validateForm()) {
+            return;
+        }
+
+        if (!captchaToken) {
+            setResponse('Please complete the reCAPTCHA before submitting.');
+            return;
+        }
+
         try {
-            // Create a single string combining all RSVP data
+            // First, verify the reCAPTCHA token
+            const verifyRes = await fetch('/verify-captcha/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ captcha_token: captchaToken }),
+            });
+
+            const verifyData = await verifyRes.json();
+            if (!verifyRes.ok) {
+                setResponse(verifyData.message || 'CAPTCHA verification failed.');
+                return;
+            }
+
+            // If verification succeeded, proceed with form submission
             const rsvpData = `
                 Name: ${name}
                 Email: ${email}
@@ -86,16 +138,21 @@ const Cards = () => {
             setGuests('');
             setAttendance('');
             setMessage('');
+            setCaptchaToken(''); // reset captcha token
         } catch (error) {
             console.error('Error:', error);
             setResponse('Error sending RSVP');
         }
     };
 
+    const handleCaptchaChange = (token) => {
+        setCaptchaToken(token);
+    };
+
     return (
         <Box
             display="flex"
-            flexDirection={{ xs: 'column', md: 'row' }} // Stack vertically on mobile, horizontally on desktop
+            flexDirection={{ xs: 'column', md: 'row' }}
             alignItems="center"
             justifyContent="center"
             sx={{
@@ -104,10 +161,9 @@ const Cards = () => {
                 gap: { xs: '20px', md: '0' },
             }}
         >
-            {/* Textarea for messages */}
             <Box
                 sx={{
-                    backgroundColor: "rgba(255, 255, 255, 0.9)", // White background with slight transparency
+                    backgroundColor: "rgba(255, 255, 255, 0.9)",
                     borderRadius: '10px',
                     padding: '20px',
                     alignItems: 'center',
@@ -117,8 +173,8 @@ const Cards = () => {
                     flexDirection: 'column',
                     gap: '10px',
                     width: { xs: '250px', md: '400px' },
-                    color: 'black', // Set default text color to black
-                    border: '2px solid white', // White outline for the box
+                    color: 'black',
+                    border: '2px solid white',
                 }}
             >
                 <Typography
@@ -126,7 +182,7 @@ const Cards = () => {
                     sx={{
                         fontFamily: 'Motterdam, sans-serif',
                         mb: 2,
-                        color: 'black', // Ensure the title is visible
+                        color: 'black',
                     }}
                 >
                     R S V P
@@ -138,23 +194,24 @@ const Cards = () => {
                     onChange={(e) => setName(e.target.value)}
                     fullWidth
                     required
+                    error={Boolean(nameError)}
+                    helperText={nameError || ''}
                     sx={{
-
                         maxWidth: 400,
                         '& .MuiInputBase-root': {
-                            backgroundColor: 'white', // White background for input fields
-                            color: 'black', // Black text for input
+                            backgroundColor: 'white',
+                            color: 'black',
                             fontFamily: 'Oswald'
                         },
                         '& .MuiOutlinedInput-root': {
                             '& fieldset': {
-                                borderColor: 'white', // White border
+                                borderColor: 'white',
                             },
                             '&:hover fieldset': {
-                                borderColor: 'cyan', // Black on hover
+                                borderColor: 'cyan',
                             },
                             '&.Mui-focused fieldset': {
-                                borderColor: 'black', // Black on focus
+                                borderColor: 'black',
                             },
                         },
                     }}
@@ -167,6 +224,8 @@ const Cards = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     fullWidth
                     required
+                    error={Boolean(emailError)}
+                    helperText={emailError || ''}
                     sx={{
                         maxWidth: 400,
                         '& .MuiInputBase-root': {
@@ -263,6 +322,12 @@ const Cards = () => {
                     }}
                 />
 
+                {/* Add reCAPTCHA component */}
+                <ReCAPTCHA
+                    sitekey="6LeTxJ0qAAAAAJoj6PG8n8VGVzbsHuuiXg6ZIvrI"
+                    onChange={handleCaptchaChange}
+                />
+
                 <Button
                     variant="contained"
                     color="primary"
@@ -300,11 +365,10 @@ const Cards = () => {
                 </Typography>
             </Box>
 
-            {/* Slider cards */}
             <Box
                 className="card-slider"
                 sx={{
-                    order: { xs: 1, md: 0 }, // Show slider second on mobile (xs), first on desktop (md)
+                    order: { xs: 1, md: 0 },
                     width: { xs: '250px', md: '400px' },
                     margin: { xs: '0 auto', md: '50px' },
                     maxWidth: '800px',
