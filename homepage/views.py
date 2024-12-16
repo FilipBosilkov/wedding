@@ -5,6 +5,9 @@ from django.views.decorators.csrf import csrf_exempt
 from .forms import MessageForm
 from rest_framework import status
 
+import logging
+
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import RegistryItem, Message, News, GalleryImage, Table
@@ -15,10 +18,7 @@ from .serializers import RegistryItemSerializer, MessageSerializer, NewsSerializ
 # Create your views here.
 
 def index(request):
-    return render(request, '')
-
-
-import logging
+    return render(request, 'index.html')
 
 
 @csrf_exempt
