@@ -17,7 +17,7 @@ from .serializers import RegistryItemSerializer, MessageSerializer, NewsSerializ
 
 # Create your views here.
 
-RECAPTCHA_SECRET_KEY = "6Lf7wZ0qAAAAAFD47btURuA1rhp3EK1DddJsfEhv"  # Replace with your secret key
+RECAPTCHA_SECRET_KEY = "6LeTxJ0qAAAAAJoj6PG8n8VGVzbsHuuiXg6ZIvrI"  # Replace with your secret key
 
 def index(request):
     return render(request, 'index.html')

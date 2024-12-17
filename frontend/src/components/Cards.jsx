@@ -324,7 +324,7 @@ const Cards = () => {
 
                 {/* Add reCAPTCHA component */}
                 <ReCAPTCHA
-                    sitekey="6LeTxJ0qAAAAAJoj6PG8n8VGVzbsHuuiXg6ZIvrI"
+                    sitekey="6LeTxJ0qAAAAADOJu7zQ3fvQBKoK5N3zryi6Ll6U"
                     onChange={handleCaptchaChange}
                 />
 
