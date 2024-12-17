@@ -172,7 +172,7 @@ const Cards = () => {
                     justifyContent: 'center',
                     flexDirection: 'column',
                     gap: '10px',
-                    width: { xs: '250px', md: '400px' },
+                    width: { xs: '280px', md: '400px' },
                     color: 'black',
                     border: '2px solid white',
                 }}
@@ -369,7 +369,7 @@ const Cards = () => {
                 className="card-slider"
                 sx={{
                     order: { xs: 1, md: 0 },
-                    width: { xs: '250px', md: '400px' },
+                    width: { xs: '280px', md: '400px' },
                     margin: { xs: '0 auto', md: '50px' },
                     maxWidth: '800px',
                 }}
@@ -400,7 +400,7 @@ const Cards = () => {
                                         image={card.picture}
                                         sx={{
                                             objectFit: 'cover',
-                                            height: { xs: '250px', md: '580px' },
+                                            height: { xs: '300px', md: '580px' },
                                             width: '100%',
                                         }}
                                     />
