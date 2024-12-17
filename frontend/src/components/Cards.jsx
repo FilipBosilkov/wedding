@@ -387,7 +387,7 @@ const Cards = () => {
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     width: '100%',
-                                    height: { xs: 'auto', md: '583px' },
+                                    height: { xs: 'auto', md: '674px' },
                                     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                                     borderRadius: '8px',
                                     mb: 3,
@@ -400,7 +400,7 @@ const Cards = () => {
                                         image={card.picture}
                                         sx={{
                                             objectFit: 'cover',
-                                            height: { xs: '250px', md: '480px' },
+                                            height: { xs: '250px', md: '580px' },
                                             width: '100%',
                                         }}
                                     />
